@@ -19,5 +19,6 @@ module.exports = {
   rules: {
     'eslint-disable prefer-const': 'off',
     'eslint-disable no-unsafe-finally': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
   },
 };
