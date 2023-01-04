@@ -1,0 +1,23 @@
+@use '../base/base_mixins';
+@use '../base/variables';
+
+.creator-info {
+  display: flex;
+  flex-direction: column;
+  gap: .325rem;
+  text-align: center;
+  @include base_mixins.container;
+  padding-top: 1.5rem;
+  font-size: .9325rem;
+
+  a, span {
+    display: inline-block;
+    text-decoration: none;
+    color: variables.$green-color;
+    transition: .4s;
+
+    &:hover {
+      color: variables.$green-color-hover;
+    }
+  }
+}
