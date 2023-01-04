@@ -1,7 +1,11 @@
 import IRepo from './interfaces/IRepo';
 
 const userRepos = () => {
-  const repoPanel = document.querySelector('#repoPanel') as HTMLUListElement;
+  const searchPanel = document.querySelector('#searchPanel') as HTMLElement;
+  const redirectButton = document.querySelector(
+    '#redirectButton',
+  ) as HTMLElement;
+  const repoPanel = document.querySelector('#repoPanel') as HTMLElement;
   const loading = document.querySelector(
     '#loadingIconContainer',
   ) as HTMLElement;
@@ -10,8 +14,14 @@ const userRepos = () => {
   const q = urlParams.get('q');
 
   const handleGetDatas = async () => {
-    if (!q) return;
+    if (!q) {
+      searchPanel.classList.remove('hidden');
+      redirectButton.classList.remove('active');
+      return;
+    }
 
+    searchPanel.classList.add('hidden');
+    redirectButton.classList.add('active');
     loading.classList.add('active');
     repoPanel.classList.remove('active');
 

@@ -3,6 +3,9 @@ import IUser from './interfaces/IUser';
 const githubSearch = (formSearch: HTMLFormElement): void => {
   const inputSearch = formSearch.querySelector('input') as HTMLInputElement;
   const userPanel = document.querySelector('#userPanel') as HTMLElement;
+  const userRepoRedirect = userPanel.querySelector(
+    '#userRepoRedirect',
+  ) as HTMLLinkElement;
   const loading = document.querySelector(
     '#loadingIconContainer',
   ) as HTMLElement;
@@ -19,9 +22,7 @@ const githubSearch = (formSearch: HTMLFormElement): void => {
       user.following,
     );
 
-    userPanel
-      .querySelector('#userRepoRedirect')!
-      .setAttribute('href', `repositorio.html?q=${user.login}`);
+    userRepoRedirect.setAttribute('href', `index.html?q=${user.login}`);
 
     const userAvatar = userPanel.querySelector(
       '#userAvatar img',

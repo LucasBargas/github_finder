@@ -2,6 +2,7 @@
 @use '../base/variables';
 
 .search-panel {
+  display: block;
   text-align: center;
   @include base_mixins.container;
   background: variables.$secondary-color;
@@ -9,6 +10,10 @@
   padding: 2rem;
   margin-top: 2rem;
   border-radius: 8px;
+
+  &.hidden {
+    display: none;
+  }
 
   @media (max-width: 480px) {
     padding: 2rem 1.25rem;
