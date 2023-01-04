@@ -46,8 +46,6 @@ const userRepos = () => {
   };
 
   const handleRepoList = (repos: IRepo[]) => {
-    console.log(repos);
-
     repos.forEach((repo) => {
       repoPanel.querySelector('ul')!.innerHTML += `<li>
         <a href=${repo.html_url} target="_blank">${repo.name}</a>
@@ -75,8 +73,6 @@ const userRepos = () => {
         </a>
       </li>`;
     });
-
-    console.log(repoPanel);
   };
 
   handleGetDatas();
