@@ -70,6 +70,7 @@ const githubSearch = (formSearch: HTMLFormElement): void => {
 
     loading.classList.remove('active');
     status.classList.add('active');
+    status.querySelector('p')!.innerText = 'Usuário não localizado!';
     userPanel.classList.remove('active');
   };
 
