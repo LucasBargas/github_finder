@@ -1,0 +1,19 @@
+@use '../base/variables';
+
+.redirect-button {
+  padding-bottom: 1.5rem;
+
+  a {
+    background: variables.$green-color;
+    color: variables.$light-color;
+    box-shadow: #010409 0px 8px 24px;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    border-radius: 4px;
+    transition: .4s;
+
+    &:hover {
+      background: variables.$green-color-hover;
+    }
+  }
+}

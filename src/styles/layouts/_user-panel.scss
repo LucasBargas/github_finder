@@ -11,6 +11,10 @@
   margin-top: 2rem;
   border-radius: 8px;
 
+  @media (max-width: 480px) {
+    padding: 2rem 1.25rem;
+  }
+
   &.active {
     display: block;
   }
@@ -73,9 +77,25 @@
       span {
         background: variables.$green-color;
         color: variables.$light-color;
+        border-radius: 4px;
         font-size: .875rem;
         padding: .25rem;
       }
+    }
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: variables.$green-color;
+    color: variables.$light-color;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    transition: .4s;
+    text-decoration: none;
+
+    &:hover {
+      background: variables.$green-color-hover;
     }
   }
 }

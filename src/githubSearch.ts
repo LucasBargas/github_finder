@@ -1,7 +1,6 @@
 import IUser from './interfaces/IUser';
 
-const app = (): void => {
-  const formSearch = document.querySelector('#form') as HTMLFormElement;
+const githubSearch = (formSearch: HTMLFormElement): void => {
   const inputSearch = formSearch.querySelector('input') as HTMLInputElement;
   const userPanel = document.querySelector('#userPanel') as HTMLElement;
   const loading = document.querySelector(
@@ -9,7 +8,7 @@ const app = (): void => {
   ) as HTMLElement;
   const status = document.querySelector('#statusContainer') as HTMLElement;
 
-  const handleUserDetails = (user: IUser) => {
+  const handleUserDetails = (user: IUser): void => {
     userPanel.querySelector('#userLogin')!.innerHTML = user.login;
 
     userPanel.querySelector('#userFollowers span')!.innerHTML = String(
@@ -19,6 +18,10 @@ const app = (): void => {
     userPanel.querySelector('#userFollowing span')!.innerHTML = String(
       user.following,
     );
+
+    userPanel
+      .querySelector('#userRepoRedirect')!
+      .setAttribute('href', `repositorio.html?q=${user.login}`);
 
     const userAvatar = userPanel.querySelector(
       '#userAvatar img',
@@ -79,9 +82,7 @@ const app = (): void => {
     }
   };
 
-  if (formSearch) {
-    formSearch.addEventListener('submit', handleSearchFormSubmit);
-  }
+  formSearch.addEventListener('submit', handleSearchFormSubmit);
 };
 
-export default app;
+export default githubSearch;

@@ -1,0 +1,99 @@
+@use '../base/base_mixins';
+@use '../base/variables';
+
+.repo-panel {
+  display: none;
+  @include base_mixins.container;
+  box-shadow: #010409 0px 8px 24px;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+
+  @media (max-width: 480px) {
+    padding: 2rem 1.25rem;
+  }
+
+  &.active {
+    display: block;
+  }
+
+  >ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    >li {
+      border: 1px solid #565656;
+      background: variables.$secondary-color;
+      border-radius: 8px;
+      padding: 1.5rem;
+
+      @media (max-width: 480px) {
+        padding: 1.25rem;
+      }
+
+      a:first-of-type {
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      >span {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        margin: .75rem 0 1.25rem 0;
+        font-size: .875rem;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid variables.$light-color;
+          border-radius: 4px;
+          height: 2.25rem;
+
+          i, span {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            font-size: .875rem;
+            padding: .5rem .625rem;
+            border-radius: 4px;
+          }
+
+          i {
+            background-color: variables.$green-color;
+          }
+        }
+      }
+
+      a:last-of-type {
+        display: inline-block;
+        background: variables.$green-color;
+        color: variables.$light-color;
+        text-decoration: none;
+        padding: .5rem .75rem;
+        border-radius: 4px;
+        font-size: .9325rem;
+        margin-top: 1rem;
+        transition: .4s;
+
+        &:hover {
+          background: variables.$green-color-hover;
+        }
+
+        i {
+          font-size: .875rem;
+          margin-left: .5rem;
+        }
+      }
+    }
+  }
+}

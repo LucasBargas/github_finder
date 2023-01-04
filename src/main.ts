@@ -1,3 +1,10 @@
-import app from './app';
+import githubSearch from './githubSearch';
+import userRepos from './userRepos';
 
-app();
+const formSearch = document.querySelector('#form') as HTMLFormElement;
+
+if (formSearch) {
+  githubSearch(formSearch);
+}
+
+userRepos();
