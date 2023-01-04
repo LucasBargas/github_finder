@@ -1,4 +1,4 @@
-## Projeto #Galeria de Fotos LBS
+## Projeto GitHub Finder
 O projeto **GitHub Finder** foi apresentado pelo Matheus Battisti do Hora de Codar, onde o mesmo desenvolveu esta aplicação com Reactjs e Typescript.
 Para fins de estudo me baseei no layout apresentado, porém fiz todo o projeto com Typescript puro, sem Reactjs e a estilização com SCSS.
 
@@ -16,7 +16,7 @@ Recentemente recapitulei alguns tópicos sobre Typescript no Youtube. Então eu 
 #### Front end
 * Typescript;
 * SASS/SCSS;
-* Fecth API.
+* Async/await.
 
 ### Prints do App (Versão Desktop e Mobile)
 
