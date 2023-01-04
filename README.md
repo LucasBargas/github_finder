@@ -27,5 +27,5 @@ Recentemente recapitulei alguns tópicos sobre Typescript no Youtube. Então eu 
 <img alt="Página inicial com dados de usuário" src="https://i.ibb.co/b14VY9T/github-finder-home-with-datas.png">
 
 #### Página de Pesquisa de Repositórios
-<img alt="Página de Pesquisa de Repositórios" src="https://i.ibb.co/2nynMXY/github-finder-user-repos.png">
+<img alt="Página de Pesquisa de Repositórios" src="https://i.ibb.co/SmpjDhK/github-finder-user-repos.png">
 
