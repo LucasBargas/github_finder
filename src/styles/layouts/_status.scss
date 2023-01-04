@@ -1,0 +1,14 @@
+@use '../base/base_mixins';
+@use '../base/variables';
+
+
+.status-container {
+  display: none;
+  text-align: center;
+  @include base_mixins.container;
+  padding: 1.5rem 0;
+
+  &.active {
+    display: block;
+  }
+}

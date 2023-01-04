@@ -1,0 +1,60 @@
+@use '../base/base_mixins';
+@use '../base/variables';
+
+.search-panel {
+  text-align: center;
+  @include base_mixins.container;
+  background: variables.$secondary-color;
+  box-shadow: #010409 0px 8px 24px;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+
+  p {
+    margin-bottom: .5rem;
+  }
+}
+
+.form {
+  display: flex;
+  gap: .5rem;
+  width: 100%;
+  max-width: 85%;
+  margin: 0 auto;
+  padding-top: 1rem;
+
+  input {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    background: variables.$primary-color;
+    color: variables.$light-color;
+    height: 2.325rem;
+    padding: 0 1rem;
+    border-radius: 4px;
+
+    &:focus {
+      border-color: variables.$green-color;
+      box-shadow: 0px 0px 6px 0px variables.$green-color;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    background: variables.$green-color;
+    border: none;
+    height: 2.325rem;
+    padding: 0 .75rem;
+    border-radius: 4px;
+    transition: .4s;
+
+    &:hover {
+      background: variables.$green-color-hover;
+    }
+
+    i {
+      font-size: 1rem;
+    }
+  }
+}

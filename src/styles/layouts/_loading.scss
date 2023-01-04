@@ -1,0 +1,41 @@
+@use '../base/base_mixins';
+@use '../base/variables';
+
+@keyframes loading-icon-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-icon-container {
+  @include base_mixins.container;
+  display: none;
+  justify-content: center;
+  padding: 1.5rem 0;
+
+  &.active {
+    display: flex;
+  }
+
+  .loading-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    &:after {
+      content: " ";
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin: 8px;
+      border-radius: 50%;
+      border: 6px solid variables.$green-color;
+      border-color: variables.$green-color transparent variables.$green-color transparent;
+      animation: loading-icon-animation 1.2s linear infinite;
+    }
+  }
+}
+

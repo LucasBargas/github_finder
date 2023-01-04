@@ -1,0 +1,12 @@
+@use '../base/base_mixins';
+
+.header {
+  text-align: center;
+  @include base_mixins.container;
+
+  h2 {
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-top: .5rem;
+  }
+}

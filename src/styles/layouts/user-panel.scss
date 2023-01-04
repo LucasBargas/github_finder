@@ -1,0 +1,81 @@
+@use '../base/base_mixins';
+@use '../base/variables';
+
+.user-panel {
+  display: none;
+  text-align: center;
+  @include base_mixins.container;
+  background: variables.$secondary-color;
+  box-shadow: #010409 0px 8px 24px;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+
+  &.active {
+    display: block;
+  }
+
+  figure {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 100%;
+      object-fit: cover;
+      border: 5px solid variables.$green-color;
+    }
+  }
+
+  h3 {
+    margin: 1rem 0 .5rem 0;
+  }
+
+  .user-bio {
+    display: none;
+    margin-bottom: 1.25rem;
+  }
+
+  .user-location {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    opacity: .8;
+    font-size: .9325rem;
+
+    i {
+      position: relative;
+      top: -1px;
+    }
+  }
+
+  .user-interactions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 1.25rem;
+
+    div {
+      padding: 0 .75rem;
+
+      &:first-of-type {
+        border-right: 1px solid variables.$light-color;
+      }
+
+      h4 {
+        font-weight: 400;
+        margin-bottom: .325rem;
+      }
+
+      span {
+        background: variables.$green-color;
+        color: variables.$light-color;
+        font-size: .875rem;
+        padding: .25rem;
+      }
+    }
+  }
+}
