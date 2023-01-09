@@ -35,7 +35,6 @@ const userRepos = () => {
       repoPanel.classList.remove('active');
       status.classList.add('active');
       status.querySelector('p')!.innerText = 'Não há repositórios disponíveis!';
-      console.log(json);
       return;
     }
 
