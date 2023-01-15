@@ -1,6 +1,6 @@
 ## Projeto GitHub Finder
 O projeto **GitHub Finder** foi apresentado pelo Matheus Battisti do Hora de Codar, onde o mesmo desenvolveu esta aplicação com Reactjs e Typescript.
-Para fins de estudo me baseei no layout apresentado, porém fiz todo o projeto com Typescript puro, sem Reactjs e a estilização com SCSS.
+Para fins de estudo me baseei no layout apresentado, porém fiz todo o projeto com Typescript puro, sem Reactjs, e a estilização fiz com SCSS.
 
 ### Por que fiz este projeto?
 Recentemente recapitulei alguns tópicos sobre Typescript no Youtube. Então eu decidi aplicar meus novos conhecimentos num projeto, mas sem auxilio de algum framework ou biblioteca. Me senti bastante satisfeito com o resultado.
